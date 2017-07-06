@@ -20,3 +20,5 @@ fi
 # Set vim bindings
 set -o vi
 
+# GPG enable with ssh support
+gpg-agent --daemon --enable-ssh-support

@@ -95,3 +95,6 @@ imap !!p require 'pry' ; binding.pry
 
 " Easymotion
 let g:EasyMotion_leader_key = '\'
+
+" Clipboard setting
+set clipboard=unnamed
