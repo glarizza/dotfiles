@@ -34,6 +34,8 @@ cask 'dropbox'
 cask 'evernote'
 cask 'skype'
 cask 'virtualbox'
+cask 'vagrant'
+cask 'vagrant-manager'
 cask 'slack'
 cask 'spotify'
 cask 'kindle'
@@ -63,6 +65,9 @@ brew 'nmap'
 brew 'tmux'
 brew 'rust'
 brew 'libxml2'
+brew 'libxslt''
+brew 'libiconv'
+
 brew 'imagemagick'
 
 # A command to download mac store app
