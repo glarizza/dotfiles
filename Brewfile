@@ -1,16 +1,28 @@
-# https://github.com/Homebrew/homebrew-bundle
-# specify a directory to install
+# Brewfile, similar to a Gemfile but for Homebrew
+# Go to https://github.com/Homebrew/homebrew-bundle for more info
+# Visit https://github.com/MikeMcQuaid/strap for system-level bootstrapping
+
 cask_args appdir: '/Applications'
-# install packages
+tap 'caskroom/cask'
+tap 'homebrew/core'
+tap 'homebrew/services'
 tap 'caskroom/homebrew-cask' || true
 tap 'caskroom/versions' || true
+tap 'homebrew/bundle'
+
+# Some base-level stuff
 brew 'git'
 brew 'bash-completion'
 brew 'tree'
 brew 'node'
-# need to install java before jenkins
 cask 'java'
 brew 'wget'
+brew 'thefuck'
+
+# Ruby Time
+install 'rbenv'
+install 'ruby-build'
+
 # Casks
 cask 'vlc'
 cask 'google-chrome'
@@ -53,8 +65,7 @@ brew 'imagemagick'
 # http://www.softantenna.com/wp/mac/mas-cli/
 # https://github.com/argon/mas
 tap 'argon/mas'
-brew 'mas'
-# run download_apps later on
+brew 'mas' # run download_apps later on
 
 #go
 brew 'go'
@@ -63,6 +74,3 @@ brew 'go'
 brew 'python'
 brew 'python3'
 
-
-# for my blog, install jekyll and bundler
-# https://github.com/sergiokopplin/indigo
