@@ -65,7 +65,7 @@ brew 'nmap'
 brew 'tmux'
 brew 'rust'
 brew 'libxml2'
-brew 'libxslt''
+brew 'libxslt'
 brew 'libiconv'
 
 brew 'imagemagick'
