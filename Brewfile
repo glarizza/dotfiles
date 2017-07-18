@@ -20,8 +20,8 @@ brew 'wget'
 brew 'thefuck'
 
 # Ruby Time
-install 'rbenv'
-install 'ruby-build'
+brew 'rbenv'
+brew 'ruby-build'
 
 # Casks
 cask 'vlc'
