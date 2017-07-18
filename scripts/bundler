@@ -1,0 +1,9 @@
+# The order for ensuring rbenv and bundler work!
+#
+#   rbenv install 1.9.3-p194
+#   rbenv rehash     # for paranoia's sake
+#   rbenv global 1.9.3-p194
+#   gem env          # to check that everything was pointing at 1.9 and not the system
+#   gem install --no-ri --no-rdoc bundler
+#   rbenv rehash     # necessary to load up the bundle executable
+#   bundle --path=vendor/bundle
