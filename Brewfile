@@ -25,7 +25,7 @@ brew 'ruby-build'
 
 # Homebrew Bootstrap to assist setting up Ruby
 tap 'github/bootstrap'
-brew 'bootstrap-rbenv-ruby'
+#brew 'bootstrap-rbenv-ruby'
 
 # Casks
 cask 'vlc'
