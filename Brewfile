@@ -23,6 +23,10 @@ brew 'thefuck'
 brew 'rbenv'
 brew 'ruby-build'
 
+# Homebrew Bootstrap to assist setting up Ruby
+tap 'github/bootstrap'
+brew 'bootstrap-rbenv-ruby'
+
 # Casks
 cask 'vlc'
 cask 'google-chrome'
