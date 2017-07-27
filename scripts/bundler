@@ -7,3 +7,8 @@
 #   gem install --no-ri --no-rdoc bundler
 #   rbenv rehash     # necessary to load up the bundle executable
 #   bundle --path=vendor/bundle
+#
+#   Note that `bundle env` and `gem env` are your friends
+#
+#   If bundler finds the wrong ruby, it's most likely because the system
+#     bundler binary was installed with the wrong ruby
