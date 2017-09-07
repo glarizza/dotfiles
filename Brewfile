@@ -28,6 +28,7 @@ tap 'github/bootstrap'
 #brew 'bootstrap-rbenv-ruby'
 
 # Casks
+cask 'puppet-agent'
 cask 'vlc'
 cask 'google-chrome'
 cask 'dropbox'
