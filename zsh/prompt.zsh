@@ -16,4 +16,3 @@ ZSH_THEME="garylarizza"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-#source ~/Dropbox/PUPPET/SLICE/gary-openrc.sh

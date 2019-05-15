@@ -1,10 +1,6 @@
 ## ENVPUPPET Setup
-export ENVPUPPET_BASEDIR=~/src
 export EDITOR=vim
 export PAGER=less
-#export VAGRANT_DEFAULT_PROVIDER=virtualbox
-export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
-#export VAGRANT_DEFAULT_PROVIDER=vmware_desktop
 
 #Needed for rake tasks with rspec core
 export RUBYOPT=rubygems
