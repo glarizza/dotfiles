@@ -1,6 +1,5 @@
 filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+execute pathogen#infect()
 
 let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
 let Tlist_WinWidth = 50
@@ -21,11 +20,11 @@ syn on
 set et
 
 set background=dark
-let g:solarized_termcolors=16
+ let g:solarized_termcolors=16
 " let g:solarized_diffmode="high"
 " let g:solarized_contrast = "high"
 " let g:solarized_visibility = "high"
-let g:solarized_termtrans = 1
+ let g:solarized_termtrans = 1
 colorscheme solarized
 
 set ruler
@@ -92,9 +91,6 @@ set history=1000
 
 " Replace insert pry breakpoint in insert mode
 imap !!p require 'pry' ; binding.pry
-
-" Easymotion
-let g:EasyMotion_leader_key = '\'
 
 " Clipboard setting
 set clipboard=unnamed
