@@ -32,4 +32,11 @@ if [ -f '/Users/glarizza/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then 
 export PATH=$HOME/.local/bin:$PATH
 
 # Setup direnv
+export DIRENV_BASH=/bin/bash
 eval "$(direnv hook zsh)"
+
+# Setup fzf fuzzy finder
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --exclude .git --color=always"
+export FZF_DEFAULT_OPTS="--ansi"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"

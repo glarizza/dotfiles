@@ -83,3 +83,7 @@ brew 'go'
 brew 'python'
 brew 'python3'
 
+# Fuzzy finder
+brew 'fzf'
+brew 'fd'
+brew 'bat'
