@@ -67,7 +67,7 @@ brew 'rust'
 brew 'libxml2'
 brew 'libxslt'
 brew 'libiconv'
-
+brew 'gitlab-runner'
 brew 'imagemagick'
 
 # A command to download mac store app
@@ -87,3 +87,6 @@ brew 'python3'
 brew 'fzf'
 brew 'fd'
 brew 'bat'
+
+# Text input for git
+brew 'tig'
