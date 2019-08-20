@@ -90,3 +90,6 @@ brew 'bat'
 
 # Text input for git
 brew 'tig'
+
+# Direnv for environment files
+brew 'direnv'
