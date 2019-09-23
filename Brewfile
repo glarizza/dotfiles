@@ -28,23 +28,22 @@ tap 'github/bootstrap'
 #brew 'bootstrap-rbenv-ruby'
 
 # Casks
-cask 'puppet-agent'
+cask 'puppetlabs/puppet/puppet-agent'
+cask 'puppetlabs/puppet/pdk'
 cask 'vlc'
 cask 'google-chrome'
 cask 'dropbox'
-cask 'virtualbox'
 cask 'slack'
-cask 'spotify'
 cask '1password'
 cask 'sizeup'
 cask 'iterm2'
 cask 'dash'
-cask 'firefox'
 cask 'macdown' #markdown viewer
 # To convert mov to gif
 # https://gist.github.com/dergachev/4627207
 cask 'xquartz'
 cask 'fluid'
+cask 'visual-studio-code'
 brew 'gifsicle'
 brew 'curl'
 brew 'tree'
