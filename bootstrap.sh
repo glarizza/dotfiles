@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 # Set defaults and variables
 : "${USERNAME:=glarizza}"
 : "${HOMEDIR:=/Users/${USERNAME}}"
@@ -19,7 +21,6 @@ DOTFILES="${SRCDIR}/dotfiles"
 
 # ZSH Configuration
 [[ ! -d "${HOMEDIR}/.oh-my-zsh" ]] && git clone git@github.com:glarizza/oh-my-zsh.git "${HOMEDIR}/.oh-my-zsh"
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/themes/powerlevel10k
 [[ ! -d "${HOMEDIR}/.oh-my-zsh/themes/powerlevel10k" ]] && git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${HOMEDIR}/oh-my-zsh/themes/powerlevel10k"
 if [[ "/bin/zsh" != "${SHELL}" ]]; then
     chsh -s /bin/zsh
