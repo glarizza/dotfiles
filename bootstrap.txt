@@ -1,0 +1,13 @@
+
+1. Configure a GitHub SSH key
+2. Pull down dotfiles repo to ~/src/dotfiles
+3. Run bootstrap.sh
+4. Disable autocorrect
+
+
+iTerm Config
+* Uncheck "Native full screen windows"
+* Configure Profile
+    ** Change login shell to ZSH
+    ** Reuse previous shell's directory
+    ** Solarized dark theme 

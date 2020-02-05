@@ -1,5 +1,5 @@
 filetype off
-execute pathogen#infect()
+" execute pathogen#infect()
 
 let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
 let Tlist_WinWidth = 50

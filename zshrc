@@ -23,13 +23,7 @@ set -o vi
 # GPG enable with ssh support
 #gpg-agent --daemon --enable-ssh-support
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/glarizza/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/glarizza/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/glarizza/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/glarizza/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
-export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/bin:/Users/glarizza/Library/Python/3.7/bin:/Users/glarizza/.gem/ruby/2.3.0/bin:$PATH
 
 # Setup direnv
 export DIRENV_BASH=/bin/bash
@@ -41,3 +35,9 @@ export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --exclude .git --co
 export FZF_DEFAULT_OPTS="--ansi"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS="--ansi --preview-window 'right:50%' --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/glarizza/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/glarizza/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/glarizza/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/glarizza/google-cloud-sdk/completion.zsh.inc'; fi
