@@ -17,7 +17,8 @@ DOTFILES="${SRCDIR}/dotfiles"
 [[ ! -h "${HOMEDIR}/.zshrc" ]] && ln -s "${DOTFILES}/zshrc" "${HOMEDIR}/.zshrc"
 [[ ! -h "${HOMEDIR}/.p10k.zsh" ]] && ln -s "${DOTFILES}/p10k.zsh" "${HOMEDIR}/.p10k.zsh"
 [[ ! -h "${HOMEDIR}/.tmux.conf" ]] && ln -s "${DOTFILES}/tmux.conf" "${HOMEDIR}/.tmux.conf"
-[[ ! -d "${HOMEDIR}/.vim/colors" ]] && mkdir -p "${HOMEDIR}/.vim/colors" && git clone git://github.com/altercation/vim-colors-solarized.git "${HOMEDIR}/src/vim-colors-solarized" && cp "${HOMEDIR}/src/vim-colors-solarized/colors/solarized.vim" "${HOMEDIR}/.vim/colors/solarized.vim"
+[[ ! -d "${HOMEDIR}/.vim/colors" ]] && mkdir -p "${HOMEDIR}/.vim/colors"
+[[ ! -f "${HOMEDIR}/.vim/colors/solarized.vim" ]] && git clone git://github.com/altercation/vim-colors-solarized.git "${HOMEDIR}/src/vim-colors-solarized" && cp "${HOMEDIR}/src/vim-colors-solarized/colors/solarized.vim" "${HOMEDIR}/.vim/colors/solarized.vim"
 
 # ZSH Configuration
 [[ ! -d "${HOMEDIR}/.oh-my-zsh" ]] && git clone git@github.com:glarizza/oh-my-zsh.git "${HOMEDIR}/.oh-my-zsh"
