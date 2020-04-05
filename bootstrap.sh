@@ -22,7 +22,7 @@ DOTFILES="${SRCDIR}/dotfiles"
 
 # ZSH Configuration
 [[ ! -d "${HOMEDIR}/.oh-my-zsh" ]] && git clone git@github.com:glarizza/oh-my-zsh.git "${HOMEDIR}/.oh-my-zsh"
-[[ ! -d "${HOMEDIR}/.oh-my-zsh/themes/powerlevel10k" ]] && git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${HOMEDIR}/oh-my-zsh/themes/powerlevel10k"
+[[ ! -d "${HOMEDIR}/.oh-my-zsh/themes/powerlevel10k" ]] && git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${HOMEDIR}/.oh-my-zsh/themes/powerlevel10k"
 if [[ "/bin/zsh" != "${SHELL}" ]]; then
     chsh -s /bin/zsh
     echo "NOTE: You will need to restart for the ZSH shell change to take effect"
@@ -31,6 +31,6 @@ fi
 # Homebrew and application setup
 if ! which brew > /dev/null 2>&1
 then
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 cd "${DOTFILES}" && brew bundle

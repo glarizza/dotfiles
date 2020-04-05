@@ -23,7 +23,7 @@ set -o vi
 # GPG enable with ssh support
 #gpg-agent --daemon --enable-ssh-support
 
-export PATH=$HOME/.local/bin:/Users/glarizza/Library/Python/3.7/bin:/Users/glarizza/.gem/ruby/2.3.0/bin:$PATH
+export PATH=/usr/local/bin:$HOME/.local/bin:/Users/glarizza/Library/Python/3.7/bin:/Users/glarizza/.gem/ruby/2.3.0/bin:$PATH
 
 # Setup direnv
 export DIRENV_BASH=/bin/bash
@@ -41,3 +41,6 @@ if [ -f '/Users/glarizza/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/glariz
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/glarizza/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/glarizza/google-cloud-sdk/completion.zsh.inc'; fi
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
