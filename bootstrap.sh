@@ -21,7 +21,7 @@ DOTFILES="${SRCDIR}/dotfiles"
 [[ ! -f "${HOMEDIR}/.vim/colors/solarized.vim" ]] && git clone git://github.com/altercation/vim-colors-solarized.git "${HOMEDIR}/src/vim-colors-solarized" && cp "${HOMEDIR}/src/vim-colors-solarized/colors/solarized.vim" "${HOMEDIR}/.vim/colors/solarized.vim"
 
 # ZSH Configuration
-[[ ! -d "${HOMEDIR}/.oh-my-zsh" ]] && git clone git@github.com:glarizza/oh-my-zsh.git "${HOMEDIR}/.oh-my-zsh"
+[[ ! -d "${HOMEDIR}/.oh-my-zsh" ]] && git clone https://github.com/glarizza/oh-my-zsh.git "${HOMEDIR}/.oh-my-zsh"
 [[ ! -d "${HOMEDIR}/.oh-my-zsh/themes/powerlevel10k" ]] && git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${HOMEDIR}/.oh-my-zsh/themes/powerlevel10k"
 if [[ "/bin/zsh" != "${SHELL}" ]]; then
     chsh -s /bin/zsh
