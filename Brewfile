@@ -3,11 +3,10 @@
 # Visit https://github.com/MikeMcQuaid/strap for system-level bootstrapping
 
 cask_args appdir: '/Applications'
-tap 'caskroom/cask'
 tap 'homebrew/core'
 tap 'homebrew/services'
-tap 'caskroom/homebrew-cask' || true
-tap 'caskroom/versions' || true
+tap 'caskroom/cask-cask' || true
+tap 'caskroom/cask-versions' || true
 tap 'homebrew/bundle'
 
 # Some base-level stuff
