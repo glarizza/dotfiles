@@ -29,7 +29,6 @@ tap 'github/bootstrap'
 # Casks
 cask 'puppetlabs/puppet/puppet-agent'
 cask 'puppetlabs/puppet/pdk'
-cask 'virtualbox'
 cask 'vagrant'
 cask 'vagrant-manager'
 cask 'vlc'
@@ -60,6 +59,9 @@ brew 'libxslt'
 brew 'libiconv'
 brew 'gitlab-runner'
 brew 'imagemagick'
+
+# Docker
+cask 'docker'
 
 # A command to download mac store app
 # http://www.softantenna.com/wp/mac/mas-cli/
