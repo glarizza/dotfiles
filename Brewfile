@@ -78,6 +78,7 @@ brew 'python3'
 brew 'fzf'
 brew 'fd'
 brew 'bat'
+brew 'rg'
 
 # Text input for git
 brew 'tig'
