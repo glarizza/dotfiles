@@ -90,3 +90,6 @@ brew 'tig'
 
 # Direnv for environment files
 brew 'direnv'
+
+# Github CLI
+brew 'gh'
