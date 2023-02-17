@@ -5,16 +5,21 @@
 cask_args appdir: '/Applications'
 tap 'homebrew/core'
 tap 'homebrew/services'
-tap 'caskroom/cask-cask' || true
-tap 'caskroom/cask-versions' || true
+tap 'homebrew/aliases'
+tap 'homebrew/autoupdate'
+tap 'homebrew/cask'
+tap 'homebrew/cask-drivers'
+tap 'homebrew/cask-fonts'
+tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
+tap 'hashicorp/tap'
+tap '1password/tap'
 
 # Some base-level stuff
 brew 'git'
 brew 'bash-completion'
 brew 'tree'
 brew 'node'
-cask 'java'
 brew 'wget'
 brew 'thefuck'
 
@@ -33,7 +38,6 @@ cask 'vagrant'
 cask 'vagrant-manager'
 cask 'vlc'
 cask 'google-chrome'
-cask 'google-chat'
 cask 'slack'
 cask '1password'
 cask 'sizeup'
@@ -93,3 +97,19 @@ brew 'direnv'
 
 # Github CLI
 brew 'gh'
+
+# Hashicorp tools
+brew 'hashicorp/tap/terraform'
+brew 'hashicorp/tap/packer'
+
+# Kubernetes and Holos deps
+brew 'hashicorp/tap/vault'
+brew 'kubectl'
+brew 'helm'
+brew 'kustomize'
+brew 'gomplate'
+brew 'yq'
+brew 'jq'
+
+# Docsy/Hugo site deps
+brew 'hugo'
