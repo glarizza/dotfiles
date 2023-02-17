@@ -37,6 +37,7 @@ export DIRENV_BASH=/bin/bash
 eval "$(direnv hook zsh)"
 
 # Setup fzf fuzzy finder
+# NOTE: If CTRL-T is not working run /usr/local/opt/fzf/install to install dependencies
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --exclude .git --color=always"
 export FZF_DEFAULT_OPTS="--ansi"
