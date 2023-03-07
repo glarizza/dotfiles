@@ -63,6 +63,7 @@ brew 'libxslt'
 brew 'libiconv'
 brew 'gitlab-runner'
 brew 'imagemagick'
+brew 'watch'
 
 # Native OS X copying in tmux
 brew 'reattach-to-user-namespace'
