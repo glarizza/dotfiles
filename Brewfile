@@ -34,6 +34,7 @@ tap 'github/bootstrap'
 # Casks
 cask 'puppetlabs/puppet/puppet-agent'
 cask 'puppetlabs/puppet/pdk'
+cask 'puppetlabs/puppet/puppet-bolt'
 cask 'vagrant'
 cask 'vagrant-manager'
 cask 'vlc'
@@ -68,8 +69,9 @@ brew 'watch'
 # Native OS X copying in tmux
 brew 'reattach-to-user-namespace'
 
-# Docker
+# Docker and Podman
 cask 'docker'
+brew 'podman'
 
 # A command to download mac store app
 # http://www.softantenna.com/wp/mac/mas-cli/
@@ -111,6 +113,11 @@ brew 'kustomize'
 brew 'gomplate'
 brew 'yq'
 brew 'jq'
+brew 'istioctl'
+brew 'homeport/tap/dyff'
 
 # Docsy/Hugo site deps
 brew 'hugo'
+
+# Stream deck
+cask 'elgato-stream-deck'
