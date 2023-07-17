@@ -133,3 +133,4 @@ brew 'awscli'
 
 # GnuPG for commit signing
 brew 'gnupg'
+brew 'pinentry-mac'
