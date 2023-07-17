@@ -121,3 +121,15 @@ brew 'hugo'
 
 # Stream deck
 cask 'elgato-stream-deck'
+
+# Cloudflare wrangler
+brew 'cloudflare-wrangler'
+
+# Loki logcli
+brew 'logcli'
+
+# AWS Cli tool
+brew 'awscli'
+
+# GnuPG for commit signing
+brew 'gnupg'
