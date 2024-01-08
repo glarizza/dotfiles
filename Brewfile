@@ -124,9 +124,6 @@ brew 'hugo'
 # Stream deck
 cask 'elgato-stream-deck'
 
-# Cloudflare wrangler
-brew 'cloudflare-wrangler'
-
 # Loki logcli
 brew 'logcli'
 
