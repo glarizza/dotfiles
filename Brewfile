@@ -127,10 +127,12 @@ cask 'elgato-stream-deck'
 # Loki logcli
 brew 'logcli'
 
-# AWS Cli tool
+# AWS  and aws-nuke Cli tools
 brew 'awscli'
+brew 'aws-nuke'
 
 # GnuPG for commit signing
+# https://gist.github.com/troyfontaine/18c9146295168ee9ca2b30c00bd1b41e
 brew 'gnupg'
 brew 'pinentry-mac'
 
