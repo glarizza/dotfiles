@@ -105,6 +105,7 @@ brew 'gh'
 # Hashicorp tools
 brew 'hashicorp/tap/terraform'
 brew 'hashicorp/tap/packer'
+brew 'hashicorp/tap/vlt'
 
 # Kubernetes and Holos deps
 brew 'hashicorp/tap/vault'
@@ -136,3 +137,9 @@ brew 'awscli'
 brew 'gnupg'
 brew 'pinentry-mac'
 
+# For enforcing .pre-commit-config.yaml
+brew 'pre-commit'
+
+# For FluxCD
+tap 'fluxcd/tap'
+brew 'fluxcd/tap/flux'

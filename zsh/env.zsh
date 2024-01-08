@@ -14,3 +14,6 @@ bindkey "\e[A" history-search-backward
 
 # Ensure history is shared
 setopt inc_append_history
+
+# Direnv
+eval "$(direnv hook zsh)"
