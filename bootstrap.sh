@@ -27,6 +27,9 @@ if [[ "/bin/zsh" != "${SHELL}" ]]; then
     echo "NOTE: You will need to restart for the ZSH shell change to take effect"
 fi
 
+# Setup ZSH Autocompletion repo
+[[ ! -d "${SRCDIR}/zsh-autocomplete" ]] && git clone --depth=1 https://github.com/marlonrichert/zsh-autocomplete.git "${SRCDIR}/zsh-autocomplete"
+
 # Homebrew and application setup
 if ! which brew > /dev/null 2>&1
 then

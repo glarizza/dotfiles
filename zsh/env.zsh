@@ -11,3 +11,6 @@ bindkey "^r" history-incremental-search-backward
 # Use arrows to search back/forth in history search
 bindkey "\e[B" history-search-forward
 bindkey "\e[A" history-search-backward
+
+# Ensure history is shared
+setopt inc_append_history

@@ -52,7 +52,6 @@ cask 'fluid'
 cask 'visual-studio-code'
 brew 'gifsicle'
 brew 'curl'
-brew 'tree'
 brew 'gawk'
 brew 'wget'
 brew 'zsh'
@@ -85,6 +84,8 @@ brew 'go'
 # python
 brew 'python'
 brew 'python3'
+brew 'python@3.10'
+brew 'python@3.11'
 
 # Fuzzy finder
 brew 'fzf'
@@ -134,3 +135,4 @@ brew 'awscli'
 # GnuPG for commit signing
 brew 'gnupg'
 brew 'pinentry-mac'
+
