@@ -33,7 +33,7 @@ set -o vi
 # GPG enable with ssh support
 #gpg-agent --daemon --enable-ssh-support
 
-export PATH=/usr/local/bin:$HOME/.local/bin:/Users/glarizza/Library/Python/3.7/bin:/Users/glarizza/.gem/ruby/2.3.0/bin:$PATH
+export PATH=/usr/local/bin:$HOME/.local/bin:/Users/glarizza/Library/Python/3.7/bin:/Users/glarizza/.gem/ruby/2.3.0/bin:/opt/homebrew/bin:$PATH
 
 # Setup direnv
 export DIRENV_BASH=/bin/bash
