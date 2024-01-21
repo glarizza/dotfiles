@@ -116,6 +116,7 @@ brew 'gomplate'
 brew 'yq'
 brew 'jq'
 brew 'istioctl'
+tap 'homeport/tap'
 brew 'homeport/tap/dyff'
 
 # Docsy/Hugo site deps
