@@ -1,3 +1,5 @@
+export PATH=/usr/local/bin:$HOME/.local/bin:/Users/glarizza/Library/Python/3.7/bin:/Users/glarizza/.gem/ruby/2.3.0/bin:/opt/homebrew/bin:$PATH
+
 # See https://github.com/keybase/keybase-issues/issues/2798
 export GPG_TTY=$(tty)
 
@@ -15,13 +17,12 @@ vim_swap=${HOME}/.vimswp
 [[ ! -d $vim_swap ]] && mkdir -p $vim_swap
 
 # Quit bloating .zshrc with shit
+autoload -U compinit && compinit
 export MYZSH=$HOME/src/dotfiles/zsh
 for config_file ($MYZSH/**/*.zsh ) source $config_file
 for config_file ($MYZSH/functions/* ) source $config_file
 
 fpath=($MYZSH/functions $fpath)
-
-autoload -U compinit && compinit
 
 if [[ -z $TMUX ]]; then
   tmux attach -d
@@ -33,14 +34,13 @@ set -o vi
 # GPG enable with ssh support
 #gpg-agent --daemon --enable-ssh-support
 
-export PATH=/usr/local/bin:$HOME/.local/bin:/Users/glarizza/Library/Python/3.7/bin:/Users/glarizza/.gem/ruby/2.3.0/bin:/opt/homebrew/bin:$PATH
-
 # Setup direnv
 export DIRENV_BASH=/bin/bash
 eval "$(direnv hook zsh)"
 
 # Setup fzf fuzzy finder
 # NOTE: If CTRL-T is not working run /usr/local/opt/fzf/install to install dependencies
+# NOTE: May also be located at /opt/homebrew/Cellar/fzf/0.45.0/install
 # NOTE: Run /Users/glarizza/src/dotfiles/zshrc to generate ~/.fzf.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --exclude .git --color=always"

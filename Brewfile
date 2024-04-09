@@ -27,6 +27,9 @@ brew 'thefuck'
 brew 'rbenv'
 brew 'ruby-build'
 
+# VPN
+brew 'tailscale'
+
 # Homebrew Bootstrap to assist setting up Ruby
 tap 'github/bootstrap'
 #brew 'bootstrap-rbenv-ruby'
@@ -118,6 +121,13 @@ brew 'jq'
 brew 'istioctl'
 tap 'homeport/tap'
 brew 'homeport/tap/dyff'
+brew 'cue-lang/tap/cue'
+
+# NOTE: Protobuf connect should be installed via GO:
+#   go install github.com/bufbuild/buf/cmd/buf@latest
+#   go install github.com/fullstorydev/grpcurl/cmd/grpcurl@latest
+#   go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+#   go install connectrpc.com/connect/cmd/protoc-gen-connect-go@latest
 
 # Docsy/Hugo site deps
 brew 'hugo'
@@ -143,3 +153,7 @@ brew 'pre-commit'
 # For FluxCD
 tap 'fluxcd/tap'
 brew 'fluxcd/tap/flux'
+
+# For testing out GitHub Actions locally
+brew 'act'
+
