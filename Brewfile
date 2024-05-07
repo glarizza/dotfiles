@@ -44,7 +44,8 @@ cask 'vlc'
 cask 'google-chrome'
 cask 'slack'
 cask '1password'
-cask 'sizeup'
+# Tiling window manager to replace SizeUp which doesn't work correctly on Apple Silicon
+cask 'rectangle'
 cask 'iterm2'
 cask 'dash'
 cask 'macdown' #markdown viewer
