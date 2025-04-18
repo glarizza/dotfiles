@@ -3,9 +3,7 @@
 set -x
 
 # Set defaults and variables
-: "${USERNAME:=glarizza}"
-: "${HOMEDIR:=/Users/${USERNAME}}"
-SRCDIR="/Users/${USERNAME}/src"
+SRCDIR="${HOME}/src"
 DOTFILES="${SRCDIR}/dotfiles"
 
 # Create required directories
@@ -13,15 +11,15 @@ DOTFILES="${SRCDIR}/dotfiles"
 
 # Dotfiles Configuration
 [[ ! -d "${DOTFILES}" ]] && git clone git@github.com:glarizza/dotfiles.git "${DOTFILES}"
-[[ ! -h "${HOMEDIR}/.vimrc" ]] && ln -s "${DOTFILES}/vimrc" "${HOMEDIR}/.vimrc"
-[[ ! -h "${HOMEDIR}/.zshrc" ]] && ln -s "${DOTFILES}/zshrc" "${HOMEDIR}/.zshrc"
-[[ ! -h "${HOMEDIR}/.p10k.zsh" ]] && ln -s "${DOTFILES}/p10k.zsh" "${HOMEDIR}/.p10k.zsh"
-[[ ! -h "${HOMEDIR}/.tmux.conf" ]] && ln -s "${DOTFILES}/tmux.conf" "${HOMEDIR}/.tmux.conf"
-[[ ! -d "${HOMEDIR}/.vim/colors" ]] && mkdir -p "${HOMEDIR}/.vim/colors"
-[[ ! -f "${HOMEDIR}/.vim/colors/solarized.vim" ]] && git clone https://github.com/altercation/vim-colors-solarized.git "${HOMEDIR}/src/vim-colors-solarized" && cp "${HOMEDIR}/src/vim-colors-solarized/colors/solarized.vim" "${HOMEDIR}/.vim/colors/solarized.vim"
+[[ ! -d "${HOME}/.fzf" ]] && git clone --depth 1 https://github.com/junegunn/fzf.git ${HOME}/.fzf && echo "Run ~/.fzf/install to configure fzf"
+[[ ! -h "${HOME}/.vimrc" ]] && ln -s "${DOTFILES}/vimrc" "${HOME}/.vimrc"
+[[ ! -h "${HOME}/.zshrc" ]] && ln -s "${DOTFILES}/zshrc" "${HOME}/.zshrc"
+[[ ! -h "${HOME}/.tmux.conf" ]] && ln -s "${DOTFILES}/tmux.conf" "${HOME}/.tmux.conf"
+[[ ! -d "${HOME}/.vim/colors" ]] && mkdir -p "${HOME}/.vim/colors"
+[[ ! -f "${HOME}/.vim/colors/solarized.vim" ]] && git clone https://github.com/altercation/vim-colors-solarized.git "${HOME}/src/vim-colors-solarized" && cp "${HOME}/src/vim-colors-solarized/colors/solarized.vim" "${HOME}/.vim/colors/solarized.vim"
 
-# ZSH Configuration
-[[ ! -d "${HOMEDIR}/powerlevel10k" ]] && git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${HOMEDIR}/powerlevel10k"
+# P10k and ZSH Configuration
+[[ ! -d "${HOME}/powerlevel10k" ]] && git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${HOME}/powerlevel10k" && echo "Run 'p10k configure' to setup p10k for the first time"
 if [[ "/bin/zsh" != "${SHELL}" ]]; then
     chsh -s /bin/zsh
     echo "NOTE: You will need to restart for the ZSH shell change to take effect"
@@ -30,9 +28,19 @@ fi
 # Setup ZSH Autocompletion repo
 [[ ! -d "${SRCDIR}/zsh-autocomplete" ]] && git clone --depth=1 https://github.com/marlonrichert/zsh-autocomplete.git "${SRCDIR}/zsh-autocomplete"
 
-# Homebrew and application setup
-if ! which brew > /dev/null 2>&1
-then
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+# Are we running on Debian or macOS?
+if grep -q '^ID=debian' /etc/os-release; then
+  echo "Running on Debian"
+else
+  echo "Running on macOS..."
+
+  # Check for homebrew and install if not found
+  if ! which brew > /dev/null 2>&1
+  then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  fi
+  cd "${DOTFILES}" && brew bundle
 fi
-cd "${DOTFILES}" && brew bundle
+
+# Homebrew and application setup
+

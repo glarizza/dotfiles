@@ -4,4 +4,4 @@ if which kubectl > /dev/null 2>&1 ; then
 fi
 
 # Load zsh-autocompletion
-source /Users/glarizza/src/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source $HOME/src/zsh-autocomplete/zsh-autocomplete.plugin.zsh
