@@ -3,7 +3,7 @@ export EDITOR=vim
 export PAGER=less
 
 #Needed for rake tasks with rspec core
-export RUBYOPT=rubygems
+#export RUBYOPT=rubygems
 
 # Bind incremental history search
 bindkey "^r" history-incremental-search-backward
@@ -17,3 +17,4 @@ setopt inc_append_history
 
 # Direnv
 eval "$(direnv hook zsh)"
+

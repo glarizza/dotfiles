@@ -17,6 +17,7 @@ DOTFILES="${SRCDIR}/dotfiles"
 [[ ! -h "${HOME}/.tmux.conf" ]] && ln -s "${DOTFILES}/tmux.conf" "${HOME}/.tmux.conf"
 [[ ! -d "${HOME}/.vim/colors" ]] && mkdir -p "${HOME}/.vim/colors"
 [[ ! -f "${HOME}/.vim/colors/solarized.vim" ]] && git clone https://github.com/altercation/vim-colors-solarized.git "${HOME}/src/vim-colors-solarized" && cp "${HOME}/src/vim-colors-solarized/colors/solarized.vim" "${HOME}/.vim/colors/solarized.vim"
+[[ ! -d "${HOME}/.local/bin" ]] && mkdir -p "${HOME}/.local/bin"
 
 # P10k and ZSH Configuration
 [[ ! -d "${HOME}/powerlevel10k" ]] && git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${HOME}/powerlevel10k" && echo "Run 'p10k configure' to setup p10k for the first time"
@@ -30,7 +31,12 @@ fi
 
 # Are we running on Debian or macOS?
 if grep -q '^ID=debian' /etc/os-release; then
+  packages=(fd-find vim bat)
   echo "Running on Debian"
+  sudo apt install "${packages[@]}" -y
+
+  [[ ! -h "${HOME}/.local/bin/fd" ]] && ln -s $(which fdfind) ~/.local/bin/fd
+  [[ ! -h "${HOME}/.local/bin/bat" ]] && ln -s $(which batcat) ~/.local/bin/bat
 else
   echo "Running on macOS..."
 
