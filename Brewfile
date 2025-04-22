@@ -3,12 +3,9 @@
 # Visit https://github.com/MikeMcQuaid/strap for system-level bootstrapping
 
 cask_args appdir: '/Applications'
-tap 'homebrew/core'
 tap 'homebrew/services'
 tap 'homebrew/aliases'
 tap 'homebrew/autoupdate'
-tap 'homebrew/cask'
-# tap 'homebrew/cask-drivers'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
@@ -76,19 +73,11 @@ brew 'reattach-to-user-namespace'
 cask 'docker'
 brew 'podman'
 
-# A command to download mac store app
-# http://www.softantenna.com/wp/mac/mas-cli/
-# https://github.com/argon/mas
-tap 'argon/mas'
-brew 'mas' # run download_apps later on
-
 #go
 brew 'go'
 
 # python
-brew 'python'
 brew 'python3'
-brew 'python@3.10'
 brew 'python@3.11'
 
 # Fuzzy finder

@@ -1,4 +1,4 @@
-export PATH=/usr/local/bin:$HOME/.local/bin:$HOME/Library/Python/3.7/bin:$HOME/.gem/ruby/2.3.0/bin:/opt/homebrew/bin:$PATH
+export PATH=/usr/local/bin:$HOME/.local/bin:/opt/homebrew/sbin:/opt/homebrew/bin:$HOME/.bin:$PATH
 
 # See https://github.com/keybase/keybase-issues/issues/2798
 export GPG_TTY=$(tty)
