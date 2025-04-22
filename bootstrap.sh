@@ -48,5 +48,3 @@ else
   cd "${DOTFILES}" && brew bundle
 fi
 
-# Homebrew and application setup
-
