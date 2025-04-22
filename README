@@ -1,8 +1,7 @@
-This is the home for all my non-sensitive dotfiles.
+This is the home for all my non-sensitive dotfiles. Run bootstrap.sh to setup symlinks and install critical components.
 
 ~/.vimrc -> ~/dotfiles/vimrc
 ~/.vim   -> ~/dotfiles/vim
-
-~/.irssi -> ~/dotfiles/irssi
+~/.zshrc -> ~/dotfiles/zshrc
 
 etc
