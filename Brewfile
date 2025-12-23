@@ -147,3 +147,8 @@ brew 'fluxcd/tap/flux'
 # For testing out GitHub Actions locally
 brew 'act'
 
+# BlackHole audio driver for capturing audio
+# https://github.com/ExistentialAudio/BlackHole?tab=readme-ov-file
+brew 'blackhole-2ch'
+brew 'act'
+
